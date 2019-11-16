@@ -38,7 +38,7 @@
 	
 	<!-- config interceptors -->
 	<mvc:interceptors>
-		<bean class="com.laptrinhjavaweb.Interceptors.InitMenu" />
+		<bean class="com.laptrinhjavaweb.interceptors.InitMenu" />
 	</mvc:interceptors>
 	
 </beans>

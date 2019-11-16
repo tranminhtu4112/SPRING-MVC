@@ -1,4 +1,7 @@
-package Interceptors;
+package com.laptrinhjavaweb.interceptors;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,9 +24,13 @@ public class InitMenu implements HandlerInterceptor{
 	}
 
 	@Override
-	public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object arg2) throws Exception {
+		List<String> menu = new ArrayList<>();
+		menu.add("Tran");
+		menu.add("Minh");
+		menu.add("Tu");
+		req.setAttribute("menu", menu);
+		return true;
 	}
 
 }
