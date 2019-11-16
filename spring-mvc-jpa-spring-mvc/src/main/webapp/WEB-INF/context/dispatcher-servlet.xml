@@ -18,7 +18,7 @@
 
         http://www.springframework.org/schema/context
 
-              http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:component-scan
 		base-package="com.laptrinhjavaweb.controller" />
@@ -35,5 +35,10 @@
 	</bean>
 	
 	<mvc:resources mapping="/template/**" location="/template/" />
+	
+	<!-- config interceptors -->
+	<mvc:interceptors>
+		<bean class="com.laptrinhjavaweb.Interceptors.InitMenu" />
+	</mvc:interceptors>
 	
 </beans>
